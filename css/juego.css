@@ -1,0 +1,29 @@
+.icon-audio{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.content-mazo{
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+}
+.content-mazo .pared{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: none;
+	z-index: 10;
+}
+.icon-mazo{
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	user-select: none;
+	transition: 0.15s transform ease;
+}
