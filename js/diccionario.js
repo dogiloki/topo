@@ -5,31 +5,13 @@ class Diccionario{
 		audio_mute:"assets/icon/audio_mute.svg",
 		mazo:"assets/icon/mazo.svg",
 		hoyo:"assets/icon/hoyo.svg",
-		topo:"assets/icon/topo.svg"
+		topo:"assets/icon/topo.svg",
+		salir:"assets/icon/salir.svg"
 	};
 
 	static audio={
 		musica:"assets/audio/musica_fondo.wav",
 		toque:"assets/audio/toque.wav"
-	};
-
-	static hoyos={
-		fila:3,
-		columna:4
-	};
-
-	static topo={
-		cantidad:3,
-		tiempo:{
-			mostrar:{
-				min:700,
-				max:1000,
-			},
-			ocultar:{
-				min:500,
-				max:1000,
-			}
-		}
 	};
 
 }

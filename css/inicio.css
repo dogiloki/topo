@@ -8,12 +8,13 @@
 body{
 	width: 100vw;
 	height: 100vh;
-	background: #dcac00ff;
+	background: #dcac00;
 	display: flex;
 	justify-content: center;
 	align-items: baseline;
 }
 .content-inicio, .content-puntaje{
+	max-width: 500px;
 	padding: 30px;
 	background: #e8e8e8;
 	border-radius: 10px;
@@ -49,14 +50,16 @@ body{
 .content-inicio h1{
 	text-align: center;
 }
-.content-puntajes{
-	height: 200px;
+.content-puntajes,.content-config{
+	min-width: 200px;
+	max-width: 100%;
+	height: 50vh;
 	margin-top: 20px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	cursor: default;
 }
-.content-puntajes legend{
+.content-puntajes legend, .content-config legend{
 	color: #353535;
 	margin-left: 10px;
 }
@@ -78,4 +81,65 @@ body{
 .content-inicio .btn:hover, .content-puntaje .btn:hover{
 	color: #0a9002;
 	border: 1px solid #0a9002;
+}
+.content-config{
+	padding: 10px;
+}
+.content-config label{
+	margin-top: 20px;
+}
+.content-config .caja{
+	width: 100%;
+	padding: 5px;
+	font-size: 17px;
+	border: none;
+	box-shadow: 0px 1px #c2c2c2;
+	transition: 0.1s all ease;
+	margin-bottom: 5px;
+	color: #353535;
+	background: none;
+	outline: none;
+	user-select: auto;
+}
+.content-config .btn{
+	background: none;
+	border: none;
+	text-decoration: underline;
+	color: #353535;
+}
+.content-config .caja:focus{
+	box-shadow: 0px 2px #dcac00;
+}
+.content-config .content-dificultad{
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	box-shadow: 0px 1px #c2c2c2;
+}
+.content-config .content-dificultad .opcion{
+	margin: 5px;
+	display: block;
+	padding: 5px 10px 5px 30px;
+	position: relative;
+	cursor: pointer;
+}
+.content-config .content-dificultad .opcion:before{
+	content: "";
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 5px;
+	border-radius: 50%;
+	border: 3px solid #dcac00;
+}
+.content-config .content-dificultad .opcion:hover{
+	background: #ffe485;
+}
+.content-config .content-dificultad .radio{
+	display: none;
+}
+.content-config .content-dificultad .radio:checked + .opcion:before{
+	background: #dcac00;
+}
+.content-config .content-dificultad .radio:checked + .opcion{
+	border-radius: 2px;
 }

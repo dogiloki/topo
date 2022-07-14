@@ -1,7 +1,19 @@
-.icon-audio{
+.icon{
 	width: 30px;
 	height: 30px;
+	margin: 20px;
 	cursor: pointer;
+}
+.content-puntos,.content-tiempo{
+	float: left;
+	font-size: 20px;
+	margin-right: 20px;
+}
+.content-puntos:before{
+	content: "Puntos: ";
+}
+.content-tiempo:before{
+	content: "Tiempo: ";
 }
 .content-mazo{
 	width: 100px;
@@ -30,7 +42,6 @@
 .content-hoyos{
 	width: 80vw;
 	height: 80vh;
-	margin-top: 5vh;
 	position: relative;
 }
 .content-hoyos .hoyo{

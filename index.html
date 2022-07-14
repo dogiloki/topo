@@ -6,6 +6,8 @@
 	<title>TOPO</title>
 	<link rel="stylesheet" type="text/css" href="css/inicio.css">
 	<link rel="stylesheet" type="text/css" href="css/juego.css">
+	<script type="text/javascript" src="js/puntaje.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
 	<script type="text/javascript" src="js/diccionario.js"></script>
 	<script type="text/javascript" src="js/util.js"></script>
 	<script type="text/javascript" src="js/hoyo.js"></script>
@@ -14,15 +16,53 @@
 
 	<section class="content-inicio" id="content-inicio" style="display: none;">
 		<h1>JUEGO DEL TOPO</h1>
-		<fieldset class="content-puntajes">
-			<legend>Puntajes</legend>
-			<ol id="puntajes"></ol>
-		</fieldset>
+		<div style="display: flex;">
+			<fieldset class="content-puntajes">
+				<legend>Puntajes</legend>
+				<ol id="puntajes"></ol>
+			</fieldset>
+			<fieldset class="content-config">
+				<legend>Configuración</legend>
+				<div class="content-dificultad">
+					Dificultad
+					<input type="radio" name="dificultad" class="radio" id="config-facil">
+					<label class="opcion" for="config-facil">Fácil</label>
+					<input type="radio" name="dificultad" class="radio" id="config-medio">
+					<label class="opcion" for="config-medio">Medio</label>
+					<input type="radio" name="dificultad" class="radio" id="config-dificil">
+					<label class="opcion" for="config-dificil">Difícil</label>
+					<input type="radio" name="dificultad" class="radio" id="config-personalizado">
+					<label class="opcion" for="config-personalizado">Personalizado</label>
+				</div>
+				<label>
+					Filas de hoyos
+					<input type="text" class="caja" id="config-fila">
+				</label><br><br>
+				<label>
+					Columnas de hoyos
+					<input type="text" class="caja" id="config-columna">
+				</label><br><br>
+				<label>
+					Número de topos
+					<input type="text" class="caja" id="config-cantidad">
+				</label><br><br>
+				<label>
+					Tiempo de salida del topo
+					<input type="text" class="caja" id="config-mostrar-min" placeholder="Mínima">
+					<input type="text" class="caja" id="config-mostrar-max" placeholder="Máxima">
+				</label><br><br>
+				<label>
+					Tiempo de entrada del topo
+					<input type="text" class="caja" id="config-ocultar-min" placeholder="Mínima">
+					<input type="text" class="caja" id="config-ocultar-max" placeholder="Máxima">
+				</label>
+			</fieldset>
+		</div>
 		<button class="btn" id="btn-jugar">JUGAR</button>
 	</section>
 
 	<section class="content-puntaje" id="content-puntaje-obtenido" style="display: none;">
-		<div class="puntos" id="content-puntaje"></div>
+		<div class="content-puntos" id="content-puntaje"></div>
 		<input type="text" class="caja" id="caja-nombre" placeholder="Nombre">
 		<button class="btn" id="btn-aceptar">ACEPTAR</button>
 	</section>
@@ -37,7 +77,10 @@
 			<div class="pared"></div>
 			<img class="icon-mazo" id="icon-mazo">
 		</div>
-		<img class="icon-audio" id="icon-audio">
+		<img class="icon" id="icon-salir">
+		<img class="icon" id="icon-audio">
+		<div class="content-tiempo" id="content-tiempo"></div>
+		<div class="content-puntos" id="content-puntos"></div>
 		<div class="content-hoyos" id="content-hoyos"></div>
 	</section>
 
