@@ -248,6 +248,7 @@ function inicio(){
 }
 
 async function juego(){
+	this.getConfig();
 	this.icon_mazo.style.transform="rotateZ(0deg) rotateY(0deg)";
 	Util.modal(content_inicio,false);
 	Util.modal(content_juego,true);
@@ -319,7 +320,7 @@ function mostrarPuntaje(){
 	this.audio_musica.pause();
 	Util.modal(content_juego,false);
 	Util.modal(content_puntaje_obtenido,true);
-	this.caja_nombre.value="Jugador "+(Number((Puntaje.puntajes()??[]).length)+1);
+	this.caja_nombre.value="Jugador ("+(Number((Puntaje.puntajes()??[]).length)+1)+")";
 	this.caja_nombre.focus();
 	this.caja_nombre.select();
 	this.puntaje_obtenido.innerHTML=this.puntos;
