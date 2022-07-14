@@ -248,6 +248,7 @@ function inicio(){
 }
 
 async function juego(){
+	this.icon_mazo.style.transform="rotateZ(0deg) rotateY(0deg)";
 	Util.modal(content_inicio,false);
 	Util.modal(content_juego,true);
 	await this.generarHoyos();
