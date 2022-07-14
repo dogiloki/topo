@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/juego.css">
 	<script type="text/javascript" src="js/diccionario.js"></script>
 	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/hoyo.js"></script>
 </head>
 <body>
 
@@ -26,15 +27,19 @@
 		<button class="btn" id="btn-aceptar">ACEPTAR</button>
 	</section>
 
+	<template id="template-hoyo">
+		<div class="hoyo" id="hoyo">
+			<img src="" id="img" class="img">
+		</div>
+	</template>
 	<section class="content-juego" id="content-juego">
-		
+		<div class="content-mazo" id="content-mazo">
+			<div class="pared"></div>
+			<img class="icon-mazo" id="icon-mazo">
+		</div>
+		<img class="icon-audio" id="icon-audio">
+		<div class="content-hoyos" id="content-hoyos"></div>
 	</section>
-
-	<img class="icon-audio" id="icon-audio">
-	<div class="content-mazo" id="content-mazo">
-		<div class="pared"></div>
-		<img class="icon-mazo" id="icon-mazo">
-	</div>
 
 	<audio id="audio-musica"></audio>
 	<audio id="audio-toque"></audio>

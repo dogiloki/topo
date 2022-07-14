@@ -3,6 +3,7 @@
 	margin: 0px;
 	font-family: arial;
 	box-sizing: border-box;
+	user-select: none;
 }
 body{
 	width: 100vw;
@@ -11,7 +12,6 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: baseline;
-	cursor: none;
 }
 .content-inicio, .content-puntaje{
 	padding: 30px;
