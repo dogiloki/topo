@@ -191,6 +191,7 @@ btn_aceptar.addEventListener("click",()=>{
 });
 
 function getConfig(){
+	this.obtenerPuntajes();
 	switch(Config.dificultad.get()){
 		case 0: this.config.dificultad.personalizado.setAttribute("checked",true); break;
 		case 1: this.config.dificultad.facil.setAttribute("checked",true); break;
@@ -328,7 +329,9 @@ function mostrarPuntaje(){
 
 function obtenerPuntajes(){
 	this.content_puntajes.innerHTML="";
-	(Puntaje.puntajes()??[]).sort((a,b)=>{
+	(Puntaje.puntajes()??[]).filter((puntaje)=>{
+		return puntaje.dificultad==Config.dificultad.get();
+	}).sort((a,b)=>{
 		return (a.puntos>b.puntos)?-1:(a.puntos<b.puntos)?1:0;
 	}).forEach((dato)=>{
 		let puntaje=document.createElement("li");
